@@ -1,20 +1,14 @@
-import { useEffect, useRef } from "react";
+import useInputState from "../../hooks/useInputState";
 
-const RefForm = () => {
+const HookForm = () => {
 
-    const nameRef = useRef(null);
-    const emailRef = useRef(null);
-    const passwordRef = useRef(null);
-
-    useEffect(() => {
-        nameRef.current.focus();
-    }, [])
+    // const [name, handleNameChange] = useInputState('Rojoni Hooked');
+    const emailState = useInputState('rojoni@sojoni.go');
+    console.log(emailState);
 
     const handleSubmit = e => {
         e.preventDefault();
-        console.log(nameRef.current.value);
-        console.log(emailRef.current.value);
-        console.log(passwordRef.current.value);
+        console.log(emailState.value);
     }
 
     return (
@@ -22,18 +16,16 @@ const RefForm = () => {
             <form onSubmit={handleSubmit} className="w-1/2 flex flex-col items-center justify-center gap-4 mx-auto">
 
                 <input
-                    ref={nameRef}
+                    // value={name} onChange={handleNameChange}
                     className="border border-gray-300 focus:border-gray-800 bg-gray-200 rounded-3xl focus:outline-0 px-4 py-2"
                     type="text" name="name" />
 
                 <input
-                    ref={emailRef}
-                    defaultValue={'rojoni@sojoni.com'}
+                    {...emailState}
                     className="border border-gray-300 focus:border-gray-800 bg-gray-200 rounded-3xl focus:outline-0 px-4 py-2"
                     type="email" name="email" />
 
                 <input
-                    ref={passwordRef}
                     className="border border-gray-300 focus:border-gray-800 bg-gray-200 rounded-3xl focus:outline-0 px-4 py-2"
                     type="password" name="password" />
 
@@ -48,4 +40,4 @@ const RefForm = () => {
     );
 };
 
-export default RefForm;
+export default HookForm;
