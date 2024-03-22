@@ -7,8 +7,8 @@ const handleSubmit = e => {
 }
 
     return (
-        <div onSubmit={handleSubmit} className="my-8">
-            <form className="w-1/2 flex flex-col items-center justify-center gap-4 mx-auto">
+        <div className="my-8">
+            <form onSubmit={handleSubmit} className="w-1/2 flex flex-col items-center justify-center gap-4 mx-auto">
 
                 <input 
                 className="border border-gray-300 focus:border-gray-800 bg-gray-200 rounded-3xl focus:outline-0 px-4 py-2" 
