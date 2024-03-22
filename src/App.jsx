@@ -1,7 +1,7 @@
 
 import './App.css'
 import ReusableForm from './components/ReusableForm/ReusableForm'
-// import HookForm from './components/HookForm/HookForm'
+import HookForm from './components/HookForm/HookForm'
 // import RefForm from './components/RefForm/RefForm'
 // import SimpleForm from './components/SimpleForm/SimpleForm'
 // import StatefulForm from './components/StatefulForm/StatefulForm'
@@ -22,7 +22,7 @@ function App() {
       {/* <SimpleForm></SimpleForm> */}
       {/* <StatefulForm></StatefulForm> */}
       {/* <RefForm></RefForm> */}
-      {/* <HookForm></HookForm> */}
+      <HookForm></HookForm>
       <ReusableForm
         formTitle={'Sign Up'}
         buttonText={'Sign Up'}

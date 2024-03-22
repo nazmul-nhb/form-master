@@ -4,11 +4,10 @@ const HookForm = () => {
 
     // const [name, handleNameChange] = useInputState('Rojoni Hooked');
     const emailState = useInputState('rojoni@sojoni.go');
-    console.log(emailState);
+    console.log({...emailState});
 
     const handleSubmit = e => {
         e.preventDefault();
-        console.log(emailState.value);
     }
 
     return (
